@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaMo | Premium Creative Production Duo & Social Media Growth Strategy</title>
+
+    <!-- SEO & Social Sharing Tags -->
+    <meta name="description"
+        content="BellaMo is a creative production duo — Blen Haile and Mohammed Alewi — blending premium event coverage, trend-driven short-form video, and data-backed digital solutions that actually moves audiences.">
+    <meta property="og:title" content="BellaMo | Premium Creative Production Duo & Social Media Growth Strategy">
+    <meta property="og:description"
+        content="Event promotion, short-form video production, and social media growth strategy by Blen Haile and Mohammed Alewi.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <!-- Google Fonts: Elegant Didone Serif (Playfair Display) + Clean Modern Sans-Serif (Manrope) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+    <!-- EmailJS SDK Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("908ARPC--bLL0_hxk"); // Public Key
+        })();
+    </script>
+
+    <!-- Theme: apply before CSS renders to prevent flash of light theme -->
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css?v=1.1">
+
+    <!-- Scripts -->
+    <script src="script.js?v=1.1" defer></script>
+</head>
+
+<body>
+
+    <!-- Skeleton Loading Screen -->
+    <div id="skeleton-loader" class="skeleton-loader">
+        <div class="skeleton-nav">
+            <div class="skeleton-box skeleton-nav-logo"></div>
+            <div class="skeleton-nav-links">
+                <div class="skeleton-box skeleton-nav-link"></div>
+                <div class="skeleton-box skeleton-nav-link"></div>
+                <div class="skeleton-box skeleton-nav-link"></div>
+                <div class="skeleton-box skeleton-nav-link"></div>
+            </div>
+        </div>
+        <div class="skeleton-hero">
+            <div class="skeleton-box skeleton-title-large"></div>
+            <div class="skeleton-box skeleton-subtitle-large"></div>
+        </div>
+        <div class="skeleton-cards">
+            <div class="skeleton-box skeleton-card-large"></div>
+            <div class="skeleton-box skeleton-card-large"></div>
+        </div>
+    </div>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#team" class="nav-brand" aria-label="BellaMo Home">
+                <div class="nav-logo-circle">
+                    <img src="logo.png" alt="BellaMo Monogram Logo">
+                </div>
+                <span class="nav-wordmark nav-wordmark-gold">BellaMo</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#team" class="nav-link">Creators</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#contact" class="btn-primary btn-nav-cta">Let's Talk</a>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to light mode">
+                    <i class="ph ph-sun" aria-hidden="true"></i>
+                </button>
+                <button class="hamburger" id="hamburger-menu" aria-label="Toggle mobile menu" aria-expanded="false"
+                    aria-controls="mobile-nav">
+                    <i class="ph ph-list" id="hamburger-icon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu Dropdown Card -->
+        <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+            <div class="mobile-nav-links">
+                <a href="#team" class="mobile-nav-link"><i class="ph ph-user-circle" aria-hidden="true"></i>
+                    Creators</a>
+                <a href="#services" class="mobile-nav-link"><i class="ph ph-sparkles" aria-hidden="true"></i>
+                    Services</a>
+                <a href="#portfolio" class="mobile-nav-link"><i class="ph ph-film-strip" aria-hidden="true"></i>
+                    Portfolio</a>
+                <a href="#contact" class="mobile-nav-link"><i class="ph ph-envelope-simple" aria-hidden="true"></i>
+                    Contact</a>
+                <button id="theme-toggle-mobile" class="theme-toggle-btn-mobile" aria-label="Switch to light mode">
+                    <i class="ph ph-sun" aria-hidden="true"></i> Light Mode
+                </button>
+                <a href="#contact" class="btn-primary mobile-cta-btn">Let's Talk <i class="ph ph-arrow-right"
+                        aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Creators Section (Hero Landing) -->
+        <section id="team" class="hero-team-section border-divider">
+            <div class="hero-background-pattern" aria-hidden="true">
+                <!-- Subtle background elements will be styled in CSS -->
+            </div>
+            <div class="container">
+                <div class="section-header-centered fade-up-element">
+                    <h1 class="hero-brand-title">BellaMo <span
+                            style="display: block; font-size: 0.4em; font-weight: 400;">Digital solutions</span></h1>
+                    <p class="hero-tagline">We don't just create content, we craft moments that move audiences.</p>
+                </div>
+                <div class="team-cards-wrapper">
+                    <!-- Member 1: Blen Haile -->
+                    <div class="team-profile-card glass-container fade-up-element">
+                        <div class="profile-avatar-container">
+                            <a href="https://bellanawit.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Visit Blen Haile's portfolio">
+                                <img src="bell.webp" alt="Blen Haile" class="avatar-block image-avatar">
+                            </a>
+                        </div>
+                        <div class="profile-meta-info">
+                            <h3>
+                                <a href="https://bellanawit.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                    class="team-name-link">
+                                    Blen Haile
+                                    <i class="ph ph-arrow-up-right team-link-icon" aria-hidden="true"></i>
+                                </a>
+                            </h3>
+                            <span class="profile-job-title">Host &amp; On-Camera Talent</span>
+                            <p class="profile-bio">
+                                The face of the brand. Host, model, and on-screen presence that brings every shoot to
+                                life.
+                            </p>
+                            <div class="profile-tools-list">
+                                <span class="tool-pill">TikTok</span>
+                                <span class="tool-pill">Instagram</span>
+                                <span class="tool-pill">CapCut</span>
+                                <span class="tool-pill">Canva</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 2: Mohammed Alewi -->
+                    <div class="team-profile-card glass-container fade-up-element">
+                        <div class="profile-avatar-container">
+                            <a href="https://mohsquare1.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Visit Mohammed Alewi's portfolio">
+                                <img src="moh.webp" alt="Mohammed Alewi" class="avatar-block image-avatar">
+                            </a>
+                        </div>
+                        <div class="profile-meta-info">
+                            <h3>
+                                <a href="https://mohsquare1.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                    class="team-name-link">
+                                    Mohammed Alewi
+                                    <i class="ph ph-arrow-up-right team-link-icon" aria-hidden="true"></i>
+                                </a>
+                            </h3>
+                            <span class="profile-job-title">Digital Strategist &amp; Video Editor</span>
+                            <p class="profile-bio">
+                                Shoots it. Edits it. Makes it go viral.
+                            </p>
+                            <div class="profile-tools-list">
+                                <span class="tool-pill">CapCut Pro</span>
+                                <span class="tool-pill">Canva</span>
+                                <span class="tool-pill">Mobile Tools</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 3: Semira Alewi -->
+                    <div class="team-profile-card glass-container fade-up-element">
+                        <div class="profile-avatar-container">
+                            <div class="avatar-block initials-avatar" aria-label="Semira Alewi">SA</div>
+                        </div>
+                        <div class="profile-meta-info">
+                            <h3>Semira Alewi</h3>
+                            <span class="profile-job-title">Software Developer &amp; Content Creator</span>
+                            <p class="profile-bio">
+                                Software Engineering graduate from AASTU blending cutting-edge engineering with digital
+                                storytelling.
+                            </p>
+                            <div class="profile-tools-list">
+                                <span class="tool-pill">Software Dev</span>
+                                <span class="tool-pill">Content Creation</span>
+                                <span class="tool-pill">Web Tech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 4: Nuniyat Teshome -->
+                    <div class="team-profile-card glass-container fade-up-element">
+                        <div class="profile-avatar-container">
+                            <div class="avatar-block initials-avatar" aria-label="Nuniyat Teshome">NT</div>
+                        </div>
+                        <div class="profile-meta-info">
+                            <h3>Nuniyat Teshome</h3>
+                            <span class="profile-job-title">Social Media Manager &amp; Video Editor</span>
+                            <p class="profile-bio">
+                                Driving community engagement, viral media pacing, and seamless social campaign
+                                execution.
+                            </p>
+                            <div class="profile-tools-list">
+                                <span class="tool-pill">Social Media</span>
+                                <span class="tool-pill">Video Editing</span>
+                                <span class="tool-pill">Content Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 5: Leul Abiti -->
+                    <div class="team-profile-card glass-container fade-up-element">
+                        <div class="profile-avatar-container">
+                            <img src="IMG_2457.JPG" alt="Leul Abiti" class="avatar-block image-avatar" style="object-position: center 70%;">
+                        </div>
+                        <div class="profile-meta-info">
+                            <h3>Leul Abiti</h3>
+                            <span class="profile-job-title">Video Editor &amp; Website Developer</span>
+                            <p class="profile-bio">
+                                Crafting sleek digital web experiences and cinematic video edits that capture attention.
+                            </p>
+                            <div class="profile-tools-list">
+                                <span class="tool-pill">Web Development</span>
+                                <span class="tool-pill">Video Editing</span>
+                                <span class="tool-pill">UI / UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding border-divider">
+            <div class="container">
+                <div class="section-header-centered fade-up-element">
+                    <span class="section-eyebrow">Services</span>
+                    <h2 class="section-title-serif">What We Do</h2>
+                    <p class="section-subtitle">
+                        Built for brands that want to be remembered.
+                    </p>
+                </div>
+                <div class="services-grid-layout">
+                    <!-- Service 1 -->
+                    <div class="service-card glass-container fade-up-element">
+                        <div class="service-icon-box"><i class="ph ph-video-camera" aria-hidden="true"></i></div>
+                        <h3>Executive Event Coverage</h3>
+                        <p>We show up and make your event look as good as it felt.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card glass-container fade-up-element">
+                        <div class="service-icon-box"><i class="ph ph-film-strip" aria-hidden="true"></i></div>
+                        <h3>High-Performance Short-Form</h3>
+                        <p>Reels built to stop the scroll and drive action.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card glass-container fade-up-element">
+                        <div class="service-icon-box"><i class="ph ph-star-four" aria-hidden="true"></i></div>
+                        <h3>Brand Asset Narrative</h3>
+                        <p>Your story, structured to actually connect.</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card glass-container fade-up-element">
+                        <div class="service-icon-box"><i class="ph ph-users-three" aria-hidden="true"></i></div>
+                        <h3>Digital Asset Management</h3>
+                        <p>Your profile, turned into a portfolio that sells.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card glass-container fade-up-element">
+                        <div class="service-icon-box"><i class="ph ph-chart-line-up" aria-hidden="true"></i></div>
+                        <h3>Strategic Growth Analysis</h3>
+                        <p>We find what works and scale it.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="service-card glass-container fade-up-element">
+                        <div class="service-icon-box"><i class="ph ph-handshake" aria-hidden="true"></i></div>
+                        <h3>Full Production Crew</h3>
+                        <p>We outsource skilled professionals, cameramen, lighting experts, editors, and script writers
+                            to bring any production to the next level.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section section-padding border-divider">
+            <div class="container">
+                <div class="section-header-centered fade-up-element">
+                    <span class="section-eyebrow">Showcase</span>
+                    <h2 class="section-title-serif">Selected Work</h2>
+                    <p class="section-subtitle">Work that performed.</p>
+                </div>
+
+                <!-- Portfolio Filter Bar -->
+                <div class="portfolio-filter-bar fade-up-element">
+                    <button class="filter-btn active" data-filter="all" aria-label="Show all work">All Work</button>
+                    <button class="filter-btn" data-filter="blen" aria-label="Filter by Blen Haile">Blen Haile</button>
+                    <button class="filter-btn" data-filter="mohammed" aria-label="Filter by Mohammed Alewi">Mohammed
+                        Alewi</button>
+                </div>
+
+                <!-- Showcase Grid -->
+                <div class="portfolio-grid fade-up-element" id="portfolio-grid">
+                    <!-- New Video: 7669843188659588370 (Blen - Stellar Printing PLC) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_7669843188659588370.jpg"
+                                alt="Stellar Printing PLC — our Steller exercise book types" class="video-thumb"
+                                loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-book-open" aria-hidden="true"></i> Stellar
+                                Printing</span>
+                            <h4>Our Steller Exercise Book Types</h4>
+                            <p>our Steller exercise book types #exercisebook #ethiopian_tik_tok🇪🇹🇪🇹🇪🇹🇪🇹 #መርካቶ
+                                #creatorsearchinsights #fyp</p>
+                            <a href="https://www.tiktok.com/@stellarprintingplc/video/7669843188659588370"
+                                target="_blank" rel="noopener noreferrer" class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- New Video: 7668623305347239186 (Blen - Stellar Printing PLC) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_7668623305347239186.jpg"
+                                alt="Stellar Printing PLC — Steller exercise book manufacturing process"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-book-open" aria-hidden="true"></i> Stellar
+                                Printing</span>
+                            <h4>Steller Exercise Book Manufacturing Process</h4>
+                            <p>Steller exercise book manufacturing process #exercisebook
+                                #ethiopian_tik_tok🇪🇹🇪🇹🇪🇹🇪🇹 #መርካቶ #creatorsearchinsights #fyp</p>
+                            <a href="https://www.tiktok.com/@stellarprintingplc/video/7668623305347239186"
+                                target="_blank" rel="noopener noreferrer" class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 13. ZS4RHkKR3 (Blen - Stellar Printing PLC) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZS4RHkKR3.jpg"
+                                alt="Stellar Printing PLC — Premium Exercise Books" class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-book-open" aria-hidden="true"></i> Stellar
+                                Printing</span>
+                            <h4>Premium Exercise Books</h4>
+                            <p>📚 Where quality meets every page. Premium exercise books, proudly manufactured by
+                                Stellar. #ethiopian_tik_tok🇪🇹🇪🇹🇪🇹🇪🇹 #ExerciseBooks #መርካቶ #viral #fyp</p>
+                            <a href="https://vt.tiktok.com/ZS4RHkKR3/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 1. ZSXuDjSJg (New Almi Video 1) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSXuDjSJg.jpg" alt="Almi Products Video"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-leaf" aria-hidden="true"></i> Almi
+                                Products</span>
+                            <h4>Almi Products Video</h4>
+                            <p>አልሚ የጤፍ ዱቄት በጣእሙ የትመሰከረለት እንዲሁም በጥራቱ ወደር የሌለው ንጹ የኢትዮጵያ ነጭ እና ጥቁር የጤፍ ዱቄት አምርቶ ለገበያ
+                                አቅርቦሎታል:: ምርቶቻችንን በአሜሪካ እንዲሁም በካናዳ በሁሉም የመሸጫ ሱቆች ያገኙታል:: ምርቶቻችንን ለማዘዝ👇 በአሜሪካ በ Selmta
+                                LLC በኩል ያገኙናል፡፡ 📞(404-750- 4162) በካናዳ በ East Starr Import And Export? በኩል ያገኙናል፡፡
+                                📞(404-750- 4162) 🟢⚪️አልሚ ምርቶች የጥራት ልህቀት!⚪️🟢 አልሚ ምርቶች የጥራት ልህቀት!</p>
+                            <a href="https://vt.tiktok.com/ZSXuDjSJg/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2. ZSXuD4ntF (New Almi Video 2) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSXuD4ntF.jpg" alt="Almi Products Video"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-leaf" aria-hidden="true"></i> Almi
+                                Products</span>
+                            <h4>Almi Products Video</h4>
+                            <p>በእርግጠኝነት ሽሮ በዚህ መልኩ ሲመረት አይታችሁ አታውቁም!! #ምጥንሽሮ #አልሚምጥንሽሮ #አልሚሽሮ #shero #almishero</p>
+                            <a href="https://vt.tiktok.com/ZSXuD4ntF/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3. ZSxNFETHb (Blen - Almi Teff Flour Quality Test) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_15.jpg" alt="Premium Teff Flour Standards"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-leaf" aria-hidden="true"></i> Almi
+                                Products</span>
+                            <h4>Premium Teff Flour Standards</h4>
+                            <p>አልሚ የጤፍ ዱቄት የምትገዙት የጤፍ ዱቄት ንጹ እና ጥራቱን የጠበቀ መሆኑን እንዴት ታውቃላችሁ??
+                                https://www.almiproduct.com/ ምርቶቻችን በወኪሎቻችን በአሜሪካ Selamta Llc እንዲሁም በካናዳ Easter
+                                important export በኩል ያገኙናል። 🇺🇸 በአሜሪካ በ Selmta LLC በኩል ያገኙናል፡፡ 📞 +1 (404)-750-4162
+                                🌍https://www.selamtausa.com 🇨🇦 በካናዳ በኢስት ስታር በኩል ያገኙናል፡፡ 📞(416-750-1083) Email:
+                                henok@eaststar.ca #AlmiTeffFlour #ModernProcessing #TeffFlour #MadeInEthiopiaTeff
+                                #የጤፍዱቄት</p>
+                            <a href="https://vt.tiktok.com/ZSxNFETHb/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4. ZSxNF3poH (Blen - Almi Dabo Kolo Snack) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_new_3.jpg" alt="Almi Dabo Kolo Snack" class="video-thumb"
+                                loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-sparkles" aria-hidden="true"></i> Almi
+                                Products</span>
+                            <h4>Almi Dabo Kolo Snack</h4>
+                            <p>አልሚ እንጀራ ራሳችን በምናመርተው 100% ንፁህ የጤፍ ዱቄት፤ ንጹ በሆነው የመጋገሪያ ስፍራ፤ በላቦራቶሪያችን ጥራትና ምዘና በውቅ ባለሙያዎች
+                                ተፈትሾ በተጨማሪም ጥራቱን በጠበቀ አስተሻሸግ ቀርቦሎታል። ይህን የመሰለ እንጀራችንን በነጭና በቀይ አማራጭ በሁሉም የሀበሻ ሱቆች
+                                ያገኙታል:: https://www.almiproduct.com/ ምርቶቻችን በወኪሎቻችን በአሜሪካ Selamta Llc እንዲሁም በካናዳ Easter
+                                important export በኩል ያገኙናል። 🇺🇸 በአሜሪካ በ Selmta LLC በኩል ያገኙናል፡፡ 📞 +1 (404)-750-4162
+                                🌍https://www.selamtausa.com 🇨🇦 በካናዳ በኢስት ስታር በኩል ያገኙናል፡፡ 📞(416-750-1083) Email:
+                                henok@eaststar.ca #አልሚእንጀራ #almiInjera #TeffFlour # #የጤፍ ዱቄት #whiteInjera</p>
+                            <a href="https://vt.tiktok.com/ZSxNF3poH/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 5. ZSxNFcpvU (Blen - Export Standard Teff Flour) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_16.jpg" alt="Export Standard Teff Flour"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-leaf" aria-hidden="true"></i> Almi
+                                Products</span>
+                            <h4>Export Standard Teff Flour</h4>
+                            <p>አልሚ ምርቶች በኤክስፖርት ስታንዳርድ የሚመረቱት የጤፍ ዱቄት፤ ቆሎ፤ ዳቦ ቆሎ፤ ሽሮ፤ በርበሬ፤ ቆጮ እንዲሁም 45 በላይ የተለያዩ ምርቶችን
+                                አምርቶ በሀገር ውስጥ ገበያ በተጨማሪም በአሜሪካ እንዲሁም በካናዳ በደምበኞቻችን ተወዳጅነትን አትርፏል:: በተጨማሪም በኢሮፕ, በአውስትራሊ
+                                እንዲሁም በተለያዩ የአለም ሀገራት ተደራሽነታችንን ለማስፋት ዝግጅታችንን አጠናቀን ጨርሰናል በመሆኑም አከፋፋዮች እንዲሁም አስመጭዎች ከኛ
+                                ጋር አብራችሁን እንድትሰሩ ጥሪያችን ነው:: WhatsApp 👇 +251 97 947 5653 Email 👇
+                                almiproducts1@gmail.com Abaystrading@gmail.com #EthiopianDiaspora #ethiopianspice
+                                #Europe #Australia #wholesaler</p>
+                            <a href="https://vt.tiktok.com/ZSxNFcpvU/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 6. ZSXDvSJfA (Blen - Madiga Cafe) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSXDvSJfA.jpg" alt="Madiga Cafe - Healthy Food Promo"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-fork-knife" aria-hidden="true"></i> Food &amp;
+                                Lifestyle</span>
+                            <h4>Madiga Cafe — Healthy Food Promo</h4>
+                            <p>🌿 Eat Healthy. Feel Great. Relax in Comfort. ☕ Welcome to Madiga Cafe your cozy, safe,
+                                and welcoming spot to enjoy fresh, nutritious meals made with quality ingredients.
+                                Whether you’re catching up with friends, working remotely, or simply treating yourself,
+                                we’ve created the perfect atmosphere for every moment. 📍 Branch 1: Bole Japan, next to
+                                Igloo Ice Cream 📍 Branch 2: Bole Atlas, Grace Plaza Visit Madiga Café today and
+                                discover healthy food in a warm and relaxing environment. We can’t wait to serve you!
+                                🍋‍🟩 #MarigaCafe #HealthyMeals #EatFresh #HealthyLifestyle #creatorsearchinsights</p>
+                            <a href="https://vt.tiktok.com/ZSXDvSJfA/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 7. ZSCdRLjGx (Blen - Event Visual Campaign) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSCdRLjGx.jpg" alt="Event Visual Campaign"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-sparkles" aria-hidden="true"></i> Event
+                                Highlights</span>
+                            <h4>Event Visual Campaign</h4>
+                            <p>Sheva toys 🧸 for your kids and children toys bicycles dolls puzzles and etc #kids #gift
+                                #toy #children ##creatorsearchinsights</p>
+                            <a href="https://vt.tiktok.com/ZSCdRLjGx/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 8. ZSxN1ojmp (Blen - Campus & Career Selection Advice) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_new_2.jpg" alt="Campus & Career Selection Advice"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph-fill ph-fire" aria-hidden="true"></i> Most
+                                Viewed</span>
+                            <h4>Campus &amp; Career Selection Advice</h4>
+                            <p>Don’t miss this while choosing your department 📌 #fyp #viral #africa #opportunity
+                                #information @Nhatty 🦈</p>
+                            <a href="https://vt.tiktok.com/ZSxN1ojmp/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 9. ZSH7xSt37 (Blen - AUTV Exclusive Correspondent) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_9.jpg" alt="Africa Unite TV Live Coverage"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-video-camera" aria-hidden="true"></i> Press &amp;
+                                Media</span>
+                            <h4>Africa Unite TV Live Coverage</h4>
+                            <p>EXCLUSIVE: Meet Africa Unite TV&#x27;s Rising Star Correspondent Addis Ababa, Ethiopia -
+                                Africa Unite TV is thrilled to introduce its latest correspondent, the talented and
+                                dynamic Ms. Blen Haile Agezwe. This 20-year-old multi-talented journalist is set to
+                                bring you the latest news and features from Ethiopia and the Horn of Africa. Based in
+                                Addis Ababa, Africa&#x27;s political capital, Blen is currently pursuing her degree in
+                                Political Science and International Relations at Addis Ababa University. Her academic
+                                background and passion for storytelling make her a powerhouse of insightful reporting.
+                                &quot;Keep AUTV connecting the continent,&quot; Blen says, excited to share the untold
+                                stories of Africa with the world. Stay tuned for Blen&#x27;s captivating reports and
+                                features from Ethiopia and beyond!</p>
+                            <a href="https://vt.tiktok.com/ZSH7xSt37/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 10. ZSH7xFtYn (Blen - Thamani Africa Awards) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_10.jpg" alt="Thamani Africa Awards Highlights"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-star-four" aria-hidden="true"></i> Event
+                                Coverage</span>
+                            <h4>Thamani Africa Awards Highlights</h4>
+                            <p>www.thamaniafricaawards.com</p>
+                            <a href="https://vt.tiktok.com/ZSH7xFtYn/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 11. ZSCks3jRY (Blen - Lifestyle Reel) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSCks3jRY.jpg" alt="Lifestyle Reel" class="video-thumb"
+                                loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-sparkles" aria-hidden="true"></i> Sheva
+                                Toys</span>
+                            <h4>Check this out!!</h4>
+                            <p>If you are around bole atlas dont forget to check out sheva toys
+                                🧸🤩#fyp#creatorsearchinsights #ethiopian_tik_tok🇪🇹🇪🇹🇪🇹🇪🇹 #trend #toys</p>
+                            <a href="https://vt.tiktok.com/ZSCks3jRY/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 12. ZSCJQd5t1 (Blen - What Kind of Child Are You?) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="blen">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSCJQd5t1.jpg" alt="What Kind of Child Are You?"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-gift" aria-hidden="true"></i> Sheva Toys</span>
+                            <h4>What Kind of Child Are You?</h4>
+                            <p>what kind of child 🧒 👧 where you put your answer on the comment #kids #toys #children
+                                #capitanamerica #creatorsearchinsights</p>
+                            <a href="https://vt.tiktok.com/ZSCJQd5t1/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 9. Moh New Video (Atlantic Trading) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_Moh_Atlantic.jpg" alt="Premium Outdoor Set Layout"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-buildings" aria-hidden="true"></i> Atlantic
+                                Trading</span>
+                            <h4>Premium Outdoor Set Layout</h4>
+                            <p>3x3 ባለ ማብራት ጥላ ⛱️ 3x3 light 💡 umbrella #መርካቶ #ጥላ #umbrella #cafe #creatorsearchinsights
+                            </p>
+                            <a href="https://www.tiktok.com/@atlantic.trading/video/7650555374302432520?_r=1&_t=ZS-97Qz4pPn6Bg"
+                                target="_blank" rel="noopener noreferrer" class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 10. ZSmYVG9yv (Moh - Highlight Reel) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSmYVG9yv.jpg" alt="Luxury Apparel Showcase"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-t-shirt" aria-hidden="true"></i> Fashion &amp;
+                                BTS</span>
+                            <h4>Luxury Apparel Showcase</h4>
+                            <p>Meet your luxury standard at nur_mens_wear ለበለጠ መረጃ 0911700421 📞091 154 5862
+                                #creatorsearchinsight #fyp #clothes #shoes #viraltiktok #classical #luxury
+                                #fentysuperbrandday#CapCut</p>
+                            <a href="https://vt.tiktok.com/ZSmYVG9yv/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 11. ZSmYVbfnR (Moh - Styling BTS) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSmYVbfnR.jpg" alt="Styling Behind-the-Scenes"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-t-shirt" aria-hidden="true"></i> Fashion &amp;
+                                BTS</span>
+                            <h4>Styling Behind-the-Scenes</h4>
+                            <p>Wear neat wear fancy ⚜️ at nur mens wear #prada #newbalance9060 #purplejeans
+                                #creatorsearchinsights2025 #christiandior #clarks #clarksoriginals #shoes #buy #original
+                                #shoestyle #fyp #ኢትዮጵያ #ልብስ #ጫማ #viralvideos #brand #oldmoney #creatorsearchinsight
+                                #adidas</p>
+                            <a href="https://vt.tiktok.com/ZSmYVbfnR/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 12. ZSmYqyRFw (Moh - Cafe Vibe Reel) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSmYqyRFw.jpg" alt="Cafe Vibe Reel" class="video-thumb"
+                                loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-coffee" aria-hidden="true"></i> Cafe &amp;
+                                Promos</span>
+                            <h4>Cafe Vibe Reel</h4>
+                            <p>Central coffee ☕️ around garment #coffee #break #cafe #shop #chilling #qualitytime
+                                #qualitycoffee #creatorsearchinsights2025 #fyp #come #follow #creatorsearchinsight
+                                #viraltiktok #food #garment #CapCut #addisababa #ኢትዮጵያ🇪🇹</p>
+                            <a href="https://vt.tiktok.com/ZSmYqyRFw/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 13. ZSx2BBGY1 (Moh - Chairs & Table Set) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSx2BBGY1.jpg" alt="Chairs & Table Set"
+                                class="video-thumb" loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-buildings" aria-hidden="true"></i> Atlantic
+                                Trading</span>
+                            <h4>Chairs &amp; Table Set</h4>
+                            <p>4 chair 🪑 with one table set and if needed with the umbrella reasonable price. call us
+                                phone number on bio #chair #table #umbrella #መርካቶ #cratorsearchinsight2026</p>
+                            <a href="https://vt.tiktok.com/ZSx2BBGY1/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <!-- 14. ZSx2B2XWW (Moh - Lighted Umbrellas) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_ZSx2B2XWW.jpg" alt="Lighted Umbrellas" class="video-thumb"
+                                loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-buildings" aria-hidden="true"></i> Atlantic
+                                Trading</span>
+                            <h4>Lighted Umbrellas (3x3)</h4>
+                            <p>3x3 ማብራት ያለዉ ጥላ #ጥላ #umbrellas #chair #restaurant #cafe #cozy #light
+                                #cratorsearchinsight2026 #addisabeba🇪🇹❤🇪🇹 #መርካቶ #አዳማ #cans #አዲስአበባ #በብዛት #በፍሬ
+                                #adonay #kaluputic #CapCut</p>
+                            <a href="https://vt.tiktok.com/ZSx2B2XWW/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 15. ZSVK3QEjJ (Leo Nail Zone) -->
+                    <div class="portfolio-card glass-container fade-up-element" data-category="mohammed">
+                        <div class="card-media">
+                            <img src="assets/thumbnails/thumb_7678374041442422036.jpg" alt="Leo Nail Zone Video Promo" class="video-thumb"
+                                loading="lazy">
+                            <div class="play-btn-circle"><i class="ph ph-play" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="card-content">
+                            <span class="category-tag"><i class="ph ph-sparkles" aria-hidden="true"></i> Leo Nail Zone</span>
+                            <h4>Leo Nail Zone Promo</h4>
+                            <p>☎️0921361621☎️ book your appointment #creatorsearchinsights #nailtechsdoingnails #leonailzone#addisababa #4kilo</p>
+                            <a href="https://vt.tiktok.com/ZSVK3QEjJ/" target="_blank" rel="noopener noreferrer"
+                                class="watch-link">
+                                Watch on TikTok <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Deliverables Section -->
+        <section class="vault-section" id="vault">
+            <div class="container">
+                <div class="section-header fade-up-element center">
+                    <h2 class="category-title text-accent"><i class="ph-fill ph-lock-key"></i> Project Deliverables</h2>
+                    <div class="header-line mx-auto"></div>
+                    <p class="section-subtitle">Private work. Behind closed doors. NDA only.</p>
+                </div>
+
+                <div class="vault-grid fade-up-element mt-5">
+                    <!-- Vault Card 1 -->
+                    <div class="vault-card">
+                        <div class="vault-badge"><i class="ph-bold ph-warning-circle"></i> CONFIDENTIAL</div>
+                        <div class="vault-video-wrapper">
+                            <video class="main-video" controls preload="metadata" playsinline controlsList="nodownload">
+                                <source src="assets/IMG_3933.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="vault-content">
+                            <h4>Elshaday decor and rental</h4>
+                            <p>Unreleased brand campaign capture &amp; transition flow.</p>
+                        </div>
+                    </div>
+
+                    <!-- Vault Card 2 -->
+                    <div class="vault-card">
+                        <div class="vault-badge"><i class="ph-bold ph-warning-circle"></i> CONFIDENTIAL</div>
+                        <div class="vault-video-wrapper">
+                            <video class="main-video" controls preload="metadata" playsinline controlsList="nodownload">
+                                <source src="assets/IMG_4592.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="vault-content">
+                            <h4>Project we did for CBE </h4>
+                            <p>Private corporate event highlights with custom audio syncing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Vault Card 3 -->
+                    <div class="vault-card">
+                        <div class="vault-badge"><i class="ph-bold ph-warning-circle"></i> CONFIDENTIAL</div>
+                        <div class="vault-video-wrapper">
+                            <video class="main-video" controls preload="metadata" playsinline controlsList="nodownload">
+                                <source src="assets/0816.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="vault-content">
+                            <h4>Exclusive youtube intro</h4>
+                            <p>Creative direction, high-impact cuts &amp; sound design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tool Arsenal Section -->
+        <section class="tools-arsenal-section section-padding">
+            <div class="container">
+                <h3 class="tools-title fade-up-element">Our Creative Arsenal</h3>
+                <div class="tools-ticker-container fade-up-element">
+                    <div class="tools-ticker-track">
+                        <!-- First list of tools -->
+                        <span class="ticker-item">TikTok</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">Instagram</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">CapCut Pro</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">Canva</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">Pinterest</span>
+                        <span class="ticker-divider"></span>
+                        <!-- Repeated for seamless loop scrolling -->
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">TikTok</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">Instagram</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">CapCut Pro</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">Canva</span>
+                        <span class="ticker-divider"></span>
+                        <span class="ticker-item">Pinterest</span>
+                        <span class="ticker-divider"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-layout-grid">
+                    <!-- Text Info Column -->
+                    <div class="contact-info-panel fade-up-element">
+                        <span class="section-eyebrow">Get In Touch</span>
+                        <h2 class="section-title-serif">Ready to Make Something Real?</h2>
+                        <p class="contact-description">
+                            A campaign, an event, a brand build let's talk.
+                        </p>
+
+                        <!-- Direct Contacts -->
+                        <div class="direct-contact-paths">
+                            <!-- Unified BellaMo Contact Card -->
+                            <div class="contact-card-glass">
+                                <div class="contact-founder-title">
+                                    <h4>BellaMo Official</h4>
+                                    <span>Creative Production &amp; Digital solutions</span>
+                                </div>
+                                <div class="contact-details-row">
+                                    <div class="detail-item">
+                                        <i class="ph ph-envelope-simple" aria-hidden="true"></i>
+                                        <a href="mailto:bellamodigitalsolution@gmail.com"
+                                            class="contact-link-inline">bellamodigitalsolution@gmail.com</a>
+                                        <button class="copy-detail-btn" data-copy="bellamodigitalsolution@gmail.com"
+                                            aria-label="Copy BellaMo's email">
+                                            <i class="ph ph-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="ph ph-phone" aria-hidden="true"></i>
+                                        <span class="contact-name-label"
+                                            style="font-weight: 600; opacity: 0.85;">Blen:</span>
+                                        <a href="tel:+251966216987" class="contact-link-inline">+251 966 216 987</a>
+                                        <button class="copy-detail-btn" data-copy="+251966216987"
+                                            aria-label="Copy Blen's phone">
+                                            <i class="ph ph-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="ph ph-phone" aria-hidden="true"></i>
+                                        <span class="contact-name-label"
+                                            style="font-weight: 600; opacity: 0.85;">Mohammed:</span>
+                                        <a href="tel:+251942194985" class="contact-link-inline">+251 942 194 985</a>
+                                        <button class="copy-detail-btn" data-copy="+251942194985"
+                                            aria-label="Copy Mohammed's phone">
+                                            <i class="ph ph-copy" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form Column -->
+                    <div class="contact-form-panel glass-container fade-up-element">
+                        <form id="bellamo-contact-form" class="interactive-form">
+                            <div class="form-group">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" name="email" placeholder="email@example.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-project">Project Type</label>
+                                <select id="form-project" name="project_type">
+                                    <option value="Short-Form Video Production">Short-Form Video Content</option>
+                                    <option value="Event Promotion Media">Event Promotion Media</option>
+                                    <option value="Social Media Strategy & Growth">Social Media Growth Strategy</option>
+                                    <option value="Full Identity Branding">Graphic Design & Branding</option>
+                                    <option value="Other Campaign">Other Project Collaboration</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" name="message" rows="5"
+                                    placeholder="Tell us about your brand goals..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary form-submit-btn" id="submit-button">
+                                Send Message <i class="ph ph-paper-plane" aria-hidden="true"></i>
+                            </button>
+                            <div class="form-feedback-message" id="form-feedback" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-content-grid">
+            <div class="footer-brand-column">
+                <a href="#team" class="footer-brand">
+                    <img src="logo.png" alt="BellaMo Monogram Logo" class="footer-logo">
+                    <span class="footer-wordmark">Bella<span class="footer-wordmark-gold">Mo</span></span>
+                </a>
+                <p class="footer-tagline">Content that moves.</p>
+                <div class="footer-social-row">
+                    <a href="#contact" aria-label="Choose who to email" class="footer-social-icon"><i
+                            class="ph ph-envelope-simple" aria-hidden="true"></i></a>
+                    <a href="#contact" aria-label="Book a Project" class="footer-social-icon"><i
+                            class="ph ph-calendar-plus" aria-hidden="true"></i></a>
+                    <a href="#contact" aria-label="Choose who to call" class="footer-social-icon"><i class="ph ph-phone"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-column">
+                <h4>Navigation</h4>
+                <div class="footer-nav-links">
+                    <a href="#team">Creators</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-legal-column">
+                <p class="footer-copyright">&copy; <span id="current-year">2026</span> BellaMo. All rights reserved.</p>
+                <p class="footer-credits">Editorial Luxury Web Experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="btn-back-to-top" aria-label="Scroll back to top">
+        <svg class="progress-circle" viewBox="0 0 36 36" width="100%">
+            <circle class="circle-track" cx="18" cy="18" r="16" fill="none" stroke-width="2"></circle>
+            <circle class="circle-progress" cx="18" cy="18" r="16" fill="none" stroke-width="2" pathLength="100">
+            </circle>
+        </svg>
+        <i class="ph ph-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Toast Notification for click-to-copy -->
+    <div id="toast-notification" class="toast-box" role="alert" aria-live="assertive" aria-hidden="true">
+        Copied to clipboard!
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+/* ==========================================================================
+   Bellamo Portfolio - Interactive Core Script
+   ========================================================================== */
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('skeleton-loader');
+    if (loader) {
+        loader.classList.add('fade-out');
+        setTimeout(() => loader.style.display = 'none', 500);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ---------------------------------------------------------
+    // 1. DOM Elements
+    // ---------------------------------------------------------
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const mobileNav = document.getElementById('mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link, .mobile-cta-btn');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section, header');
+    const btnBackToTop = document.getElementById('btn-back-to-top');
+    const circleProgress = btnBackToTop ? btnBackToTop.querySelector('.circle-progress') : null;
+    const toast = document.getElementById('toast-notification');
+    const copyBtns = document.querySelectorAll('.copy-detail-btn');
+    const contactForm = document.getElementById('bellamo-contact-form');
+    const submitBtn = document.getElementById('submit-button');
+    const formFeedback = document.getElementById('form-feedback');
+    const currentYearSpan = document.getElementById('current-year');
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+    // Set copyright year dynamically
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    // ---------------------------------------------------------
+    // 2. Mobile Menu Dropdown Card Toggle
+    // ---------------------------------------------------------
+    if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpened = mobileNav.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpened);
+
+            if (isOpened) {
+                hamburgerIcon.className = 'ph ph-x';
+            } else {
+                hamburgerIcon.className = 'ph ph-list';
+            }
+        });
+
+        // Close mobile nav when link is clicked and smooth scroll to section
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                mobileNav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburgerIcon.className = 'ph ph-list';
+
+                if (targetId && targetId.startsWith('#')) {
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Close dropdown when tapping/clicking anywhere outside
+        document.addEventListener('click', (e) => {
+            if (mobileNav.classList.contains('active') && !mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
+                mobileNav.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburgerIcon.className = 'ph ph-list';
+            }
+        });
+    }
+
+    // ---------------------------------------------------------
+    // 3. Scroll Events: Sticky Nav & Back to Top Progress
+    // ---------------------------------------------------------
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        // Sticky Navbar
+        if (scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        // Back to Top Visibility
+        if (scrollY > 300) {
+            btnBackToTop.classList.add('active');
+        } else {
+            btnBackToTop.classList.remove('active');
+        }
+
+        // Scroll Progress Ring Calculation
+        if (circleProgress && pageHeight > 0) {
+            const progress = (scrollY / pageHeight) * 100;
+            // stroke-dashoffset runs from 100 (empty) to 0 (full)
+            circleProgress.style.strokeDashoffset = 100 - progress;
+        }
+
+        // Active Navigation Link Highlighting
+        let currentActiveSectionId = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120; // offset adjustment
+            const sectionHeight = section.offsetHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                currentActiveSectionId = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentActiveSectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Run immediately in case user reloads page mid-scroll
+
+    // Scroll to Top on CTA press
+    if (btnBackToTop) {
+        btnBackToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // ---------------------------------------------------------
+    // 4. Click-to-Copy Functionality
+    // ---------------------------------------------------------
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const textToCopy = btn.getAttribute('data-copy');
+            if (!textToCopy) return;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                showToast(`Copied "${textToCopy}" to clipboard!`);
+                
+                // Add micro-animation bounce to button
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.className = 'ph ph-check';
+                    icon.style.color = '#2e7d32';
+                    setTimeout(() => {
+                        icon.className = 'ph ph-copy';
+                        icon.style.color = '';
+                    }, 2000);
+                }
+            }).catch(err => {
+                showToast('Unable to copy. Please copy manually.');
+                console.error('Clipboard copy error:', err);
+            });
+        });
+    });
+
+    const showToast = (message, type = '') => {
+        if (!toast) return;
+        toast.textContent = message;
+
+        // Reset classes and add the correct type
+        toast.className = 'toast-box';
+        if (type) toast.classList.add(type);
+
+        toast.classList.add('show');
+        toast.setAttribute('aria-hidden', 'false');
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+            toast.setAttribute('aria-hidden', 'true');
+        }, 3500);
+    };
+
+    // ---------------------------------------------------------
+    // 5. Scroll-Triggered Animations (Intersection Observer)
+    // ---------------------------------------------------------
+    const animationElements = document.querySelectorAll('.fade-up-element');
+
+    if ('IntersectionObserver' in window) {
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); // Animates once
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px' // Trigger slightly before element enters
+        });
+
+        animationElements.forEach(el => animationObserver.observe(el));
+    } else {
+        // Fallback for older browsers
+        animationElements.forEach(el => el.classList.add('animated'));
+    }
+
+    // ---------------------------------------------------------
+    // 6. Interactive Contact Form Handler (EmailJS Integration)
+    // ---------------------------------------------------------
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Set loading state
+            submitBtn.disabled = true;
+            const originalButtonContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = `Sending Message <i class="ph ph-circle-notch spinner-anim" style="display:inline-block; animation:spin 1s linear infinite;" aria-hidden="true"></i>`;
+
+            // Simple CSS animation injection for spinner
+            if (!document.getElementById('spinner-style-injection')) {
+                const styleSheet = document.createElement('style');
+                styleSheet.id = 'spinner-style-injection';
+                styleSheet.textContent = `
+                    @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+                `;
+                document.head.appendChild(styleSheet);
+            }
+
+            // EmailJS credentials
+          const serviceID = 'service_boj7ewz';
+          const templateID = 'template_1agk5zn';
+
+            // Send form using EmailJS
+            emailjs.sendForm(serviceID, templateID, contactForm)
+                .then(() => {
+                    // Reset form inputs
+                    contactForm.reset();
+
+                    // Show success feedback via Toast Notification
+                    showToast("Message sent successfully! We will contact you shortly.", "success");
+
+                    // Also show a subtle inline message
+                    formFeedback.textContent = "Thank you! Your message has been received.";
+                    formFeedback.className = "form-feedback-message success";
+
+                    // Restore button state
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalButtonContent;
+
+                    // Clear inline success message after 6 seconds
+                    setTimeout(() => {
+                        formFeedback.textContent = "";
+                        formFeedback.className = "form-feedback-message";
+                    }, 6000);
+
+                }, (err) => {
+                    // Restore button state
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalButtonContent;
+
+                    // Show error feedback
+                    showToast("Failed to send message. Please try again.", "error");
+                    formFeedback.textContent = "Error sending message. Please try again.";
+                    formFeedback.className = "form-feedback-message error";
+                    console.error('EmailJS Error:', err);
+                });
+        });
+    }
+
+    // ---------------------------------------------------------
+    // 7. Visual Theme Toggle (Night Mode)
+    // ---------------------------------------------------------
+    const setTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update toggle icons & labels
+        const iconClass = theme === 'dark' ? 'ph ph-sun' : 'ph ph-moon';
+        if (themeToggle) {
+            const toggleIcon = themeToggle.querySelector('i');
+            if (toggleIcon) toggleIcon.className = iconClass;
+            themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        }
+        if (themeToggleMobile) {
+            themeToggleMobile.innerHTML = `<i class="${iconClass}" aria-hidden="true"></i> ${theme === 'dark' ? 'Light Mode' : 'Dark Mode'}`;
+            themeToggleMobile.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        }
+    };
+
+    // Read stored theme or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme || 'dark';
+    setTheme(initialTheme);
+
+    // Click Handlers for Theme Toggle Buttons
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+    }
+
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+    }
+
+    // ---------------------------------------------------------
+    // 8. Portfolio Showcase Filter & Clickable Card Thumbnails
+    // ---------------------------------------------------------
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            portfolioCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    card.classList.remove('hidden');
+                    card.classList.add('animated');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // Make entire video thumbnail / play button clickable on mobile and desktop
+    portfolioCards.forEach(card => {
+        const watchLink = card.querySelector('.watch-link');
+        const media = card.querySelector('.card-media');
+        if (watchLink && media) {
+            media.style.cursor = 'pointer';
+            media.addEventListener('click', (e) => {
+                if (e.target.closest('.watch-link')) return;
+                window.open(watchLink.href, '_blank', 'noopener,noreferrer');
+            });
+        }
+    });
+
+    // ---------------------------------------------------------
+    // 9. Video Vault Fullscreen Orientation Lock
+    // ---------------------------------------------------------
+    const vaultVideos = document.querySelectorAll('.main-video');
+
+    vaultVideos.forEach(video => {
+        video.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement) {
+                // Adjust screen orientation lock based on video dimensions
+                if (video.videoWidth > video.videoHeight) {
+                    if (screen.orientation && screen.orientation.lock) {
+                        screen.orientation.lock('landscape').catch(() => { });
+                    }
+                } else {
+                    if (screen.orientation && screen.orientation.lock) {
+                        screen.orientation.lock('portrait').catch(() => { });
+                    }
+                }
+            } else {
+                // Unlock screen orientation when leaving fullscreen
+                if (screen.orientation && screen.orientation.unlock) {
+                    screen.orientation.unlock();
+                }
+            }
+        });
+    });
+
+});
